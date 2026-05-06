@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Jogo JokenPô</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+
+            <div class="logo-container">
+                <img src="./assets/logo.png" alt="Logo JokenPô" class="logo">
+                <h1>JokenPô</h1>
+            </div>
+
+            <div class="menu-btn-container">
+                <button class="btn-menu" aria-label="Abrir menu">
+                    <img src="./assets/menu.png" alt="Menu" class="menu-icon">
+                </button>
+            </div>
+
+            <nav  class="list-menu-container" aria-label="Abrir menu">
+                <ul>
+                    <li><a href="#start" id="start">Início</a></li>
+                    <li><a href="#rules">Regras do Jogo</a></li>
+                    <li><a href="#how">Como Jogar?</a></li>
+                    <li><a href="#playing">Vamos Jogar?</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <section class="rules-container" id="rules">
+                <h2>Regras do Jogo</h2>
+                <div class="card text-rules">
+                    <p>O jogo se baseia em três gestos principais:
+                </div>
+                <div class="card pedra">
+                    <p><strong>Pedra (Punho fechado) &#x1F44A;:</strong></p>
+                    <p>Vence a tesoura.</p>
+                </div>
+                <div class="card papel">
+                    <p><strong>Papel (Mão aberta) &#x1F590;:</strong></p>
+                    <p>Vence a pedra.</p>
+                </div>
+                <div class="card tesoura">
+                    <p><strong>Tesoura (Dois dedos estendidos) &#x270C;:</strong></p>
+                    <p>Vence o papel.</p>
+                </div>
+                <div class="card empate">
+                    <p><strong>Empate:</strong></p>
+                    <p>Se os jogadores escolherem o mesmo objeto, a partida empata.</p>
+                    </p>
+                </div>
+                <a href="#start" class="link-start">Voltar ao Início</a>
+            </section>
+
+            <section class="how-play-container" id="how">
+                <h2>Como Jogar?</h2>
+                <div class="card">
+                    <p>Primeiro os jogadores fazem o gesto atrás das costas ou escondido.</p>
+                </div>
+                <div class="card">
+                    <p>Depois contam "Pedra, papel, tesoura" ou "Jo-ken-pô" e mostram a mão.</p>
+                </div>
+                <div class="card vencedor">
+                    <p>O vencedor é decidido de acordo com as <a href="#rules">Regras do Jogo</a>.</p>
+                </div>
+                <a href="#start">Voltar ao Início</a>
+            </section>
+
+            <section class="playing-container" id="playing">
+                <h2>Vamos Jogar?</h2>
+
+                <div class="gestures-container">
+                    <button class="btn-gestures" id="pedra">&#x1F44A;</button>
+                    <button class="btn-gestures" id="papel">&#x1F590;</button>
+                    <button class="btn-gestures" id="tesoura">&#x270C;</button>
+                </div>
+
+                <div class="score-container">
+                    <p>Sua Pontuação: </p>
+                    <p><span>0</span></p>
+                    <p>Pontuação da Alexa: </p>
+                    <p><span>0</span></p>
+                </div>
+
+                <button class="btn-reset" type="reset">Resetar Pontuação</button>
+
+                <a href="#start">Voltar ao Início</a>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <p>Jogo desenvolvido por <a href="https://github.com/SuellenMMarques" target="_blank"
+                rel="noopener noreferrer"><strong>Suellen Marques</strong></a> como resolução do desafio proposto por <a
+                href="https://www.instagram.com/rodolfomorii/" target="_blank" rel="noopener noreferrer"><strong>
+                    Rodolfo
+                    Mori</strong></a> no DevClub.</p>
+    </footer>
+
+</body>
+
+</html>
