@@ -7,6 +7,9 @@ const gestures = ["Pedra", "Papel", "Tesoura"];
 let btnChosenAlexa
 let pontUser = document.querySelector(".pont-user");
 let pontAlexa = document.querySelector(".pont-alexa");
+let numberPontUser = 0;
+let numberPontAlexa = 0;
+const btnReset = document.querySelector(".btn-reset");
 
 btnMenu.addEventListener("click", function () {
     btnMenu.style.display = "none";
@@ -59,11 +62,26 @@ function checkWinner() {
         alert("Empate: Ninguém ganhou!");
     } else if (btnChosenUser == "Pedra" && btnChosenAlexa == "Tesoura") {
         alert("Parabéns Você Ganhou!");
+        numberPontUser += 1;
+        pontUser.innerHTML = numberPontUser; 
     } else if (btnChosenUser == "Papel" && btnChosenAlexa == "Pedra") {
         alert("Parabéns Você Ganhou!");
+        numberPontUser += 1;
+        pontUser.innerHTML = numberPontUser; 
     } else if (btnChosenUser == "Tesoura" && btnChosenAlexa == "Papel") {
         alert("Parabéns Você Ganhou!");
+        numberPontUser += 1;
+        pontUser.innerHTML = numberPontUser; 
     } else {
         alert("Que Pena Você Perdeu!");
+        numberPontAlexa += 1;
+        pontAlexa.innerHTML = numberPontAlexa; 
     }
 };
+
+btnReset.addEventListener("click", function () {
+    numberPontAlexa = 0;
+    numberPontUser = 0;
+    pontUser.innerHTML = 0;
+    pontAlexa.innerHTML = 0;
+});
