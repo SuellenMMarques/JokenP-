@@ -107,6 +107,7 @@ footer p {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--color-Cinza-Chumbo);
+    transition: background-color 0.5s ease;
 }
 
 .score-container {
@@ -122,9 +123,10 @@ footer p {
 h1 {
     font-family: var(--font-secundaria);
     font-size: 2rem;
+    font-weight: 500;
     padding: 0 .5rem;
     color: var(--color-Off-White);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.1rem;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -132,9 +134,11 @@ h2 {
     font-size: 1.8rem;
     font-family: var(--font-secundaria);
     padding-bottom: 1rem;
+    font-weight: 100;
     text-align: center;
     letter-spacing: .1rem;
     color: var(--color-Cinza-Chumbo);
+    text-shadow: 2px 2px #fff;
 }
 
 p {
@@ -176,11 +180,22 @@ button:hover {
     color: var(--color-Off-White);
 }
 
+.menu-btn-container {
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
 .btn-menu {
     border: 1px solid var(--color-Off-White);
     background: none;
     cursor: pointer;
     border-radius: 5px;
+    display: block;
+    transition: background-color 0.5s ease;
+}
+
+.btn-menu:hover {
+    background-color: var(--color-Rosa-Queimado);
 }
 
 .menu-icon {
@@ -188,72 +203,28 @@ button:hover {
 }
 
 .list-menu-container {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    position: absolute;
-    top: 100%;
-    /* Isso faz ele começar exatamente onde o header termina */
-    right: 0;
-    background-color: #c08497c5;
-    width: 100%;
+    list-style-type: none;
     display: none;
-    z-index: 1000;
-    /* Garante que ele fique por cima do conteúdo */
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-.list-menu-container ul li {
-    display: flex;
-    list-style: none;
-    justify-content: center;
+.list-menu-container a {
+    transition: color 0.4s ease;
 }
 
-.menu-btn-container {
-    margin: 1rem 0;
+.list-menu-container a:hover {
+    color: #fff;
+}
+
+.active {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-}
-
-.btn-menu {
-    display: block;
-}
-
-.list-menu-container {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #C08497;
-    width: 100%;
-    display: none;
-    opacity: 0;
-    /* Começa invisível */
-    visibility: hidden;
-    /* Impede cliques enquanto escondido */
-    transform: translateY(-20px);
-    /* Começa 20px acima da posição original */
-    transition: all 0.4s ease;
-    display: block !important;
-    /* Garante que o display seja block para o menu funcionar corretamente */
-}
-
-.list-menu-container ul {
-    display: flex !important;
+    gap: 1.5rem;
+    padding: 2rem 0;
     flex-direction: column;
-    padding: 1.25rem;
-    gap: 1rem;
+    background-color: var(--color-Rosa-Queimado);
+    border-radius: 20px;
 }
-
-.list-menu-container.active {
-    opacity: 1;
-    /* Fica totalmente visível */
-    visibility: visible;
-    /* Torna o menu clicável */
-    transform: translateY(0);
-}
-
 
 @media screen and (min-width: 768px) {
 
@@ -336,7 +307,7 @@ button:hover {
         font-size: 2rem;
     }
 
-    footer{
+    footer {
         padding: 1rem;
     }
 
@@ -348,5 +319,5 @@ button:hover {
         max-width: 800px;
         margin: 2rem auto;
     }
-    
+
 }
