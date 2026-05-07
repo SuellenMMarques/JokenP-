@@ -15,3 +15,10 @@ function clickedLink(item) {
         btnMenu.style.display = "block";
     });
 };
+
+window.addEventListener("click", function (event) {
+    if(menu.contains(event.target) == false && !btnMenu.contains(event.target)){
+        menu.classList.remove("active");
+        btnMenu.style.display = "block";
+    }
+});
