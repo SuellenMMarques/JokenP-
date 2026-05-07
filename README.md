@@ -55,11 +55,11 @@ O projeto foi desenvolvido com abordagem **mobile-first**, adaptando-se para tel
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/SuellenMMarques/nome-do-repositorio.git
+ https://github.com/SuellenMMarques/JokenP-
 ```
 2. Abra o arquivo `index.html` no seu navegador.
 
-Ou acesse diretamente pelo link do deploy: **[em breve](#)**
+Ou acesse diretamente pelo link do deploy: **https://suellenmmarques.github.io/JokenP-/**
 
 ---
 
